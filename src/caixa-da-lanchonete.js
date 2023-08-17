@@ -75,12 +75,10 @@ class CaixaDaLanchonete {
                     return false;
             }
         }
+        if(itens.length == 1 && (itens[0].codigo == 'combo1' || itens[0].codigo == 'combo2'))
+            return false;
         return true;
     }
-    // Pennsar numa lógica para atrelar o extra ao item principal (por código de preferencia)
-    // e daí, a partir disso mudar a função de validarItemPrincipal
-    // Digamos assim, tenque fazer com que: se a lista de itens do 
-    // usuário tiver um acompanhamento pra cafe e n tiver cafe, tenque retornar msg de erro
 
     calcularValorFinal(formaDePagamento, itensBanco, itensDigitadosUsuario){
         let resultado = 0;
